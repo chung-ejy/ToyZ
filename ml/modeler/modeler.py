@@ -77,7 +77,7 @@ class Modeler(object):
             model = gs.best_estimator_
             return {"api":"xgb","model":model,"score":score}
         except Exception as e:
-            return {"api":"xgb","model":str(e),"score":9999}
+            return {"api":"xgb","model":str(e),"score":-9999}
     
     @classmethod
     def xgb_classify(self,data,multioutput):
